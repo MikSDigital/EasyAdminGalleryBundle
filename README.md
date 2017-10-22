@@ -22,6 +22,10 @@ Mosaic listing, drag and drop upload and more for EasyAdminBundle
     ];
 ```
 
+#### install assets
+
+    php bin/console assets:install --symlink
+
 ## usage
 
 #### 1.

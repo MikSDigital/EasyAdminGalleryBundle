@@ -77,15 +77,16 @@ easy_admin:
                 #backend values
                 values:
                    #column: "value"
-                   #description: "This record created by drag'n drop!"
                     imageFile: "%%file%%"
                     title: "%%file.name%%"
                     enabled: true
+                    description: "This record created by drag'n drop!"
                     
                 #frontend values
                 fields:
                    #form fields to overwrite values
                     - 'enabled'
+                    - 'description'
                     
             list:
                 fields:

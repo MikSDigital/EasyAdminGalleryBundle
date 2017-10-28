@@ -109,7 +109,7 @@ class GalleryController extends BaseAdminController
      */
     protected function render($view, array $parameters = array(), Response $response = null)
     {
-        if ($this->request->query->get('action') == 'list')
+        if (in_array($this->request->query->get('action'), ['list', 'search']))
             $parameters['drag_drop_form'] = $this->getDragDropForm()->createView();
         return parent::render($view, $parameters, $response);
     }

@@ -21,6 +21,8 @@ class GalleryController extends BaseAdminController
      */
     public function dragDropAction()
     {
+        $accessor = $this->get('property_accessor');
+
         $entityConfig = $this->entity;
 
         $form = $this->getDragDropForm();
@@ -46,12 +48,15 @@ class GalleryController extends BaseAdminController
 
                 foreach ($values as $key => $value)
                 {
-                    if (isset($variables[$value]))
-                        $value = $variables[$value];
-                    else if (is_string($value))
-                        $value = str_replace(array_keys($variables), array_values($variables), $value);
+                    if (is_string($value))
+                    {
+                        if (isset($variables[$value]))
+                            $value = $variables[$value];
+                        else
+                            $value = str_replace(array_keys($variables), array_values($variables), $value);
+                    }
 
-                    call_user_func([$entity, 'set'.ucfirst($key)], $value);
+                    $accessor->setValue($entity, $key, $value);
                 }
 
                 $this->dispatch(EasyAdminEvents::PRE_PERSIST, ['entity' => $entity]);

@@ -2,6 +2,8 @@
 
 Mosaic listing, drag and drop upload and more for EasyAdminBundle
 
+![Demo](https://raw.githubusercontent.com/funcphp/EasyAdminGalleryBundle/master/src/Func/EasyAdminGalleryBundle/Resources/doc/preview.gif)
+
 * Mosaic / mason listing
 * Drag and drop file upload and create records
 

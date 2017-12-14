@@ -114,3 +114,7 @@ ready to drag and drop uploading.
 - [x] custom list action: drag and drop file upload and create records
 - [ ] custom show action: gallery viewing - prev / curr / next
 - [ ] custom edit action: drag and drop
+
+## contributing
+
+contribute as you want
